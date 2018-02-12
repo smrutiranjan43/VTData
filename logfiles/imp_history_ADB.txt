@@ -1,0 +1,1000 @@
+ 1001  dtbTool -o dt.img -s 2048 /home/systebui/Desktop/kernel/arch/arm64/boot/dts/qcom/
+ 1002  ls
+ 1003  chmod 777 dtbTool
+ 1004  ls
+ 1005  dtbTool -o dt.img -s 2048 /home/systebui/Desktop/kernel/arch/arm64/boot/dts/qcom/
+ 1006  chmod +777 dtbTool
+ 1007  dtbTool -o dt.img -s 2048 /home/systebui/Desktop/kernel/arch/arm64/boot/dts/qcom/
+ 1008  cd ..
+ 1009  cd skales/
+ 1010  l
+ 1011  dtbTool -o dt.img -s 2048 /home/systebui/Desktop/kernel/arch/arm64/boot/dts/qcom/
+ 1012  LS
+ 1013  Lls
+ 1014  ls
+ 1015  dtbTool -o dt.img -s 2048 /home/systebui/Desktop/kernel/arch/arm64/boot/dts/qcom
+ 1016  ;s
+ 1017  ls
+ 1018  chmod +777 dtbTool
+ 1019  ls
+ 1020  sudo chmod +777 dtbTool
+ 1021  ls
+ 1022  dtbTool -o dt.img -s 2048 /home/systebui/Desktop/kernel/arch/arm64/boot/dts/qcom
+ 1023  cd ..
+ 1024  ./skales/dtbTool -o dt.img -s 2048 /home/systebui/Desktop/kernel/arch/arm64/boot/dts/qcom
+ 1025  ./skales/dtbTool -o dt.img -s 2048 /home/systebui/Desktop/kernel/arch/arm64/boot/dts/qcom/
+ 1026  sudo apt-get install libfdt
+ 1027  sudo apt-get install libfdt-dev
+ 1028  ./skales/dtbTool -o dt.img -s 2048 /home/systebui/Desktop/kernel/arch/arm64/boot/dts/qcom/
+ 1029  wget http://builds.96boards.org/releases/dragonboard410c/linaro/debian/17.09/initrd.img-4.9.56-linaro-lt-qcom
+ 1030  cd skales/
+ 1031  export cmdline="root=/dev/ram0 rw rootwait console=ttyMSM0,115200n8"
+ 1032  ./mkbootimg --kernel /home/systebui/Desktop/kernel/arch/arm64/boot/Image.gz                    --output boot-db410c.img                    --dt dt.img                    --pagesize 2048                    --base 0x80000000 \
+ 1033  ./mkbootimg --kernel /home/systebui/Desktop/kernel/arch/arm64/boot/Image.gz  --ramdisk ../initrd.img-4.9.56-linaro-lt-qcom --output boot-db410c.img --dt ../dt.img pagesize 2048  --base 0x80000000 --cmdline "$cmdline" 
+ 1034  cd ..
+ 1035  sudo dd if=boot-db410c.img of=/dev/sdb bs=4M
+ 1036  sudo fdisk -l
+ 1037  cd Desktop/
+ 1038  cd mipi/
+ 1039  sudo dd if=boot-db410c.img of=/media/systebui/OS/debian/boot.img
+ 1040  sync
+ 1041  dmesg
+ 1042  cd ..
+ 1043  cd mipi/
+ 1044  sudo fdisk -l
+ 1045  cd ..
+ 1046  cd /home/systebui/Desktop/2
+ 1047  git clone git://codeaurora.org/quic/kernel/skales 
+ 1048  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig distro.config
+ 1049  cd kernel/
+ 1050  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig distro.config
+ 1051  cd ..
+ 1052  cd /home/systebui/Desktop/mipi/kernel
+ 1053  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig distro.config
+ 1054  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- menuconfig
+ 1055  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4 Image.gz dtbs KERNELRELEASE=4.9.56-linaro-lt-qcom
+ 1056  cd ..
+ 1057  cd 2
+ 1058  sudo dd if=boot05.img of=/dev/sdb ds=4M
+ 1059  sudo dd if=boot05.img of=/dev/sdb
+ 1060  sudo dd if=boot05.img of=/dev/sdb 
+ 1061  sudo dd if=boot05.img of=/media/systebui/C186-FE8B bs=4M
+ 1062  sudo dd if=boot05.img of=/media/systebui/C186-FE8B/ bs=4M
+ 1063  sudo dd if=boot05.img of=/dev/sdc 
+ 1064  sudo fdisk -l
+ 1065  cd /media/
+ 1066  ld
+ 1067  ls
+ 1068  cd systebui/
+ 1069  ls
+ 1070  cd 7E77-67E1/
+ 1071  ls
+ 1072  cd ..
+ 1073  cd /media/
+ 1074  ls
+ 1075  cd systebui/
+ 1076  ls
+ 1077  pwd
+ 1078  cd C186-FE8B/
+ 1079  pwd
+ 1080  sudo fdisk -l
+ 1081  cd /home/systebui/Desktop/v/kernel
+ 1082  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig distro.config
+ 1083  cd /home/systebui/Desktop/2/kernel
+ 1084  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig distro.config
+ 1085  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-defconfig distro.config
+ 1086  sudo apt-get install gcc-aarch64-linux-gnu
+ 1087  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-defconfig distro.config
+ 1088  cd
+ 1089  cd /home/systebui/Desktop/2/kernel
+ 1090  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-defconfig distro.config
+ 1091  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- menuconfig
+ 1092  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4 Image.gz dtbs KERNELRELEASE=4.9.56-linaro-lt-qcom
+ 1093  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- modules KERNELRELEASE=4.9.56-linaro-lt-qcom
+ 1094  mkdir MODULES
+ 1095  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- KERNELRELEASE=4.9.56-linaro-lt-qcom INSTALL_MOD_STRIP=1 INSTALL_MOD_PATH=MODULES/  modules_install
+ 1096  git clone git://codeaurora.org/quic/kernel/skales 
+ 1097  cd ..
+ 1098  git clone git://codeaurora.org/quic/kernel/skales 
+ 1099  export cmdline="root=/dev/ram0 rw rootwait console=ttyMSM0,115200n8"
+ 1100  ./skales/dtbTool -o dt.img -s 2048 kernel/arch/arm64/boot/dts/qcom/
+ 1101  wget http://builds.96boards.org/releases/dragonboard410c/linaro/debian/17.09/initrd.img-4.9.56-linaro-lt-qcom
+ 1102  ./skales/mkbootimg --kernel ./kernel/arch/arm64/boot/Image.gz --ramdisk ./initrd.img-4.9.56-linaro-lt-qcom --output boot-db410c.img --dt ./dt.img pagesize 2048  --base 0x80000000 --cmdline "$cmdline"
+ 1103  ./skales/mkbootimg --kernel ./kernel/arch/arm64/boot/Image.gz --ramdisk ./initrd.img-4.9.56-linaro-lt-qcom --output boot05.img --dt ./dt.img pagesize 2048  --base 0x80000000 --cmdline "$cmdline"
+ 1104  cd ..
+ 1105  cd 3
+ 1106  git: http://git.linaro.org/landing-teams/working/qualcomm/kernel.git
+ 1107  git clone -n http://git.linaro.org/landing-teams/working/qualcomm/kernel.git
+ 1108  cd /home/systebui/Desktop/2 
+ 1109  ls
+ 1110  cd kernel/
+ 1111  make distclean
+ 1112  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig distro.config
+ 1113  cd Desktop/
+ 1114  cd 3
+ 1115  ls
+ 1116  cd skales/
+ 1117  ls
+ 1118  ls /media/systebui/rootfs/dev/
+ 1119  cd /media/systebui/rootfs/dev/
+ 1120  ls
+ 1121  cd ..
+ 1122  cd /dev/
+ 1123  cd /media/systebui/rootfs/dev/
+ 1124  ls
+ 1125  cd
+ 1126  cd /media/systebui/
+ 1127  ls
+ 1128  cd rootfs/
+ 1129  ls
+ 1130  cd /dev/
+ 1131  ls
+ 1132  ls rm*
+ 1133  ls
+ 1134  cd
+ 1135  cd /media/systebui/
+ 1136  ls
+ 1137  cd rootfs/
+ 1138  ls
+ 1139  cd dev/
+ 1140  ls
+ 1141  cd ..
+ 1142  ls
+ 1143  cd
+ 1144  cd kernel/
+ 1145  git branch -r 
+ 1146  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig distro.config
+ 1147  ls
+ 1148  git branch -r 
+ 1149  ls
+ 1150  git clone -n http://git.linaro.org/landingteams/working/qualcomm/kernel.git
+ 1151  git checkout -b kernel-17.09 debian-qcom-dragonboard410c-17.09
+ 1152  ls
+ 1153  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig distro.config
+ 1154  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- menuconfig
+ 1155  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4 Image.gz dtbs KERNELRELEASE=4.9.56-linaro-lt-qcom
+ 1156  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- modules KERNELRELEASE=4.9.56-linaro-lt-qcom
+ 1157  mkdir MODULES
+ 1158  ls
+ 1159  vi Makefile 
+ 1160  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- KERNELRELEASE=4.9.56-linaro-lt-qcom INSTALL_MOD_STRIP=1 INSTALL_MOD_PATH=MODULES/  modules_install
+ 1161  cd ..
+ 1162  git clone git://codeaurora.org/quic/kernel/skales 
+ 1163  cd skales/
+ 1164  export cmdline="root=/dev/ram0 rw rootwait console=ttyMSM0,115200n8"
+ 1165  cd ..
+ 1166  cd skales/
+ 1167  cd ..
+ 1168  ./skales/dtbTool -o dt.img -s 2048 arch/arm64/boot/dts/qcom/
+ 1169  cd skales/
+ 1170  ./skales/dtbTool -o dt.img -s 2048 arch/arm64/boot/dts/qcom/
+ 1171  ls
+ 1172  cd ..
+ 1173  ./skales/dtbTool -o dt.img -s 2048 ./kernel/arch/arm64/boot/dts/qcom/
+ 1174  wget http://builds.96boards.org/releases/dragonboard410c/linaro/debian/17.09/initrd.img-4.9.56-linaro-lt-qcom
+ 1175  cd skales/
+ 1176  ./mkbootimg --kernel ./kernel/arch/arm64/boot/Image.gz --ramdisk ./initrd.img-4.9.56-linaro-lt-qcom --output boot-08.img --dt dt.img pagesize 2048  --base 0x80000000 --cmdline "$cmdline"
+ 1177  ./mkbootimg --kernel ../kernel/arch/arm64/boot/Image.gz --ramdisk ../initrd.img-4.9.56-linaro-lt-qcom --output boot-08.img --dt dt.img pagesize 2048  --base 0x80000000 --cmdline "$cmdline"
+ 1178  ./mkbootimg --kernel ../kernel/arch/arm64/boot/Image.gz --ramdisk ../initrd.img-4.9.56-linaro-lt-qcom --output boot-08.img --dt ../dt.img pagesize 2048  --base 0x80000000 --cmdline "$cmdline"
+ 1179  cd ..
+ 1180  sudo dd if=boot-08.img of=/media/systebui/OS/debian/boot.img
+ 1181  sync
+ 1182  cd Desktop/
+ 1183  cd 3/skales/
+ 1184  export cmdline="root=/dev/disk/by-partlabel/rootfs rw rootwait console=ttyMSM0,115200n8"
+ 1185  ./mkbootimg --kernel ../kernel/arch/arm64/boot/Image.gz --ramdisk ../initrd.img-4.9.56-linaro-lt-qcom --output boot-08-2.img --dt ../dt.img pagesize 2048  --base 0x80000000 --cmdline "$cmdline"
+ 1186  cd ..
+ 1187  sudo dd if=boot-08-2.img of=/media/systebui/OS/debian/boot.img
+ 1188  sync
+ 1189  cd /media/
+ 1190  cd systebui/
+ 1191  ls
+ 1192  cd OS/
+ 1193  cd debian/
+ 1194  ls -l boot.img 
+ 1195  ls  boot.img 
+ 1196  ls -a boot.img 
+ 1197  ls -al boot.img 
+ 1198  cd ..
+ 1199  cd
+ 1200  cd Desktop/
+ 1201  cd 3
+ 1202  cd kernel/
+ 1203  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig distro.config
+ 1204  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- menuconfig
+ 1205  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4 Image.gz dtbs KERNELRELEASE=4.9.56-linaro-lt-qcom
+ 1206  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- modules KERNELRELEASE=4.9.56-linaro-lt-qcom
+ 1207  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- KERNELRELEASE=4.9.56-linaro-lt-qcom INSTALL_MOD_STRIP=1 INSTALL_MOD_PATH=MODULES/  modules_install
+ 1208  cd ..
+ 1209  cd skales/
+ 1210  export cmdline="root=/dev/disk/by-partlabel/rootfs rw rootwait console=ttyMSM0,115200n8"
+ 1211  ./mkbootimg --kernel ../kernel/arch/arm64/boot/Image.gz --ramdisk ../initrd.img-4.9.56-linaro-lt-qcom --output boot-08-02-1.img --dt dt.img pagesize 2048  --base 0x80000000 --cmdline "$cmdline"
+ 1212  sudo dd if=boot-08-02-1.img of=/media/systebui/OS/debian/boot.img
+ 1213  sync
+ 1214  ./skales/dtbTool -o dt.img -s 2048  ../kernel/arch/arm64/boot/dts/qcom/
+ 1215  ./dtbTool -o dt.img -s 2048  ../kernel/arch/arm64/boot/dts/qcom/
+ 1216  ./mkbootimg --kernel ../kernel/arch/arm64/boot/Image.gz --ramdisk ../initrd.img-4.9.56-linaro-lt-qcom --output boot-db410c.img --dt ../dt.img pagesize 2048  --base 0x80000000 --cmdline "$cmdline"
+ 1217  cd ..
+ 1218  sudo dd if=boot-db410c.img of=/media/systebui/OS/debian/boot.img
+ 1219  sync
+ 1220  cd /home/systebui/Desktop/12/kernel
+ 1221  git branch -r
+ 1222  git checkout -b kernel-17.09 debian-qcom-dragonboard410c-17.09
+ 1223  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig distro.config
+ 1224  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- menuconfig
+ 1225  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4 Image.gz dtbs
+ 1226  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- modules KERNELRELEASE=4.9.56-
+ 1227  cd Desktop/
+ 1228  gcc drm_application.c 
+ 1229  make menuconfig
+ 1230  ifconfig
+ 1231  cd Desktop/
+ 1232  cd linux-at91/
+ 1233  patch -p0 -i ~/Desktop/v/1/linux_changes_21stMay.patch 
+ 1234  cd Desktop/
+ 1235  ls
+ 1236  cd 3/
+ 1237  ls
+ 1238  cd kernel/
+ 1239  ls
+ 1240  git branch
+ 1241  git checkout -b drmwork
+ 1242  git branch
+ 1243  git checkout -b haranath_drmwork
+ 1244  git branch
+ 1245  ifconfig
+ 1246  gb
+ 1247  git branch
+ 1248  git checkout kernel-17.09
+ 1249  git show
+ 1250  git log
+ 1251  git branch
+ 1252  git checkout master
+ 1253  git stash
+ 1254  git checkout master
+ 1255  git branch
+ 1256  git checkout -b siba_drm
+ 1257  git branch
+ 1258  git checkout kernel-17.09
+ 1259  git branch
+ 1260  cd 
+ 1261  cat /var/log/syslog
+ 1262  cat /var/log/syslog &
+ 1263  dmesg &
+ 1264  cd Desktop/
+ 1265  ls
+ 1266  adb logcat ActivityManager :I Videos:D*:S
+ 1267  adb devices
+ 1268  sudo adb devices
+ 1269  sudo adb kill-server
+ 1270  sudo adb start-server
+ 1271  adb devices
+ 1272  adb logcat ActivityManager :I Videos:D*:S
+ 1273  xdg-open video.mp4 
+ 1274  qq
+ 1275  dmesg -C
+ 1276  sudo dmesg -C
+ 1277  dm
+ 1278  dmesg 
+ 1279  cd /sys/kernel/debug/
+ 1280  cd /sys/kernel/
+ 1281  sudo chmod 755 debug/
+ 1282  cd debug/
+ 1283  ks
+ 1284  ls
+ 1285  cd d
+ 1286  cd dell/
+ 1287  ls
+ 1288  cat text 
+ 1289  dmesg 
+ 1290  echo 1 >> text 
+ 1291  sudo echo 1 >> text 
+ 1292  sudo chmod 664 text 
+ 1293  sudo echo 1 >> text 
+ 1294  sudo chmod 755 text 
+ 1295  sudo echo 1 >> text 
+ 1296  sudo chmod 666 text 
+ 1297  sudo echo 1 >> text 
+ 1298  dmesg 
+ 1299  cat /var/log/syslog/ &
+ 1300  cat /var/log/syslog &
+ 1301  adb logcat
+ 1302  adb logcat > audio_log.txt
+ 1303  vim audio_log.txt 
+ 1304  adb shell
+ 1305  adb shell am start -a android.intent.action.VIEW -d file:///sdcard/Download/video.mp4 -t audio/mp4
+ 1306  adb shell
+ 1307  adb logcat >> new_log.txt
+ 1308  adb shell
+ 1309  adb shell stagefright -a -o file.mp3
+ 1310  cd Desktop/
+ 1311  ls
+ 1312  adb shell stagefright -a -o video.mp4 
+ 1313  cd
+ 1314  adb shell
+ 1315  am start -a android.intent.action.VIEW -d file:///sdcard/Download/video.mp4 -t audio/mp4
+ 1316  adb shell
+ 1317  cd Desktop/
+ 1318  ls
+ 1319  cd ..
+ 1320  ls
+ 1321  cd Desktop/
+ 1322  ls
+ 1323  ls
+ 1324  cd srinu/
+ 1325  ls
+ 1326  vi debugfs.c 
+ 1327  vi debugfs.h 
+ 1328  vi debugfs.c
+ 1329  vi debugfs.h
+ 1330  vi Make
+ 1331  rm Make
+ 1332  rm Makefile
+ 1333  vi Makefile
+ 1334  ls
+ 1335  rm -rf Makefile 
+ 1336  vim Makefile
+ 1337  ls
+ 1338  make
+ 1339  vim Makefile 
+ 1340  make
+ 1341  vim Makefile 
+ 1342  make
+ 1343  vim Makefile 
+ 1344  make
+ 1345  vim Makefile 
+ 1346  make
+ 1347  vim Makefile 
+ 1348  make
+ 1349  vim Makefile 
+ 1350  make
+ 1351  vim Makefile 
+ 1352  ls
+ 1353  vim Makefile 
+ 1354  make
+ 1355  ls
+ 1356  sudo insmod debugfs.ko 
+ 1357  lsmode
+ 1358  lsmod
+ 1359  rmmod debugfs
+ 1360  sudo insmod debugfs.ko 
+ 1361  lsmod
+ 1362  rmmod debugfs 
+ 1363  sudo rmmod debugfs 
+ 1364  sudo insmod debugfs.ko 
+ 1365  lsmod 
+ 1366  lsmod | debugfs
+ 1367  lsmod | grep debugfs
+ 1368  sudo rmmod debugfs 
+ 1369  lsmod | grep debugfs
+ 1370  make
+ 1371  sudo insmod debugfs.ko 
+ 1372  lsmod | grep debugfs
+ 1373  cd 3
+ 1374  ls
+ 1375  cd ker
+ 1376  cd kernel/
+ 1377  ls
+ 1378  cd drivers/gpu/
+ 1379  ls
+ 1380  cd drm
+ 1381  ls
+ 1382  vi drm_debugfs.c 
+ 1383  adb shell
+ 1384  adb devices
+ 1385  adb logcat
+ 1386  adb shell
+ 1387  adb devices
+ 1388  ls
+ 1389  cd Desktop/
+ 1390  ls
+ 1391  cd software/
+ 1392  ls
+ 1393  adb push MX\ Player.apk /sdcard/Download
+ 1394  adb push ../video.mp4 /sdcard/Download
+ 1395  cd Desktop/
+ 1396  cd 3/
+ 1397  ls
+ 1398  cd kernel/
+ 1399  cd drivers/
+ 1400  cd gpu/drm/
+ 1401  ls
+ 1402  vim drm_debugfs.c 
+ 1403  ls drm_crtc
+ 1404  ls *drm_crtc
+ 1405  ls drm_cr*
+ 1406  ls drm_crtc*
+ 1407  vi drm_crtc.c 
+ 1408  grep crtc
+ 1409  grep | crtc
+ 1410  grep -rf crtc
+ 1411  vi drm_crtc.c 
+ 1412  gedit drm_crtc.c 
+ 1413  gedit drm_crtc.c
+ 1414  vi drm_crtc.c 
+ 1415  grep ctrc
+ 1416  grep -r crtc
+ 1417  grep -r "drm_crtc_init"
+ 1418  vi drm_crtc.c 
+ 1419  ls
+ 1420  cd Desktop/
+ 1421  ls
+ 1422  cd 3/
+ 1423  ls
+ 1424  cd kernel/
+ 1425  ls
+ 1426  cd ..
+ 1427  ls
+ 1428  cd srinu/
+ 1429  ls
+ 1430  vi debugfs.c
+ 1431  cd 
+ 1432  dmesg
+ 1433  vi my_debugfs.c
+ 1434  vi debugfs.h
+ 1435  cd 
+ 1436  cd /sys/
+ 1437  ls
+ 1438  cd kernel/
+ 1439  ls
+ 1440  cd 
+ 1441  cd /include
+ 1442  cd /src/
+ 1443  cd srinu/
+ 1444  vi Makefile 
+ 1445  make
+ 1446  lsmod | grep debugfs
+ 1447  sudo rsmod debugfs
+ 1448  sudo insmod my_debugfs.ko
+ 1449  lsmod | grep my_debugfs
+ 1450  cd 
+ 1451  cd /sys/kernel/debug/
+ 1452  sudo chmod 665 debug/
+ 1453  cd /sys/kernel
+ 1454  sudo chmod 665 debug/
+ 1455  cd debug/
+ 1456  ls
+ 1457  cd dell/
+ 1458  ls
+ 1459  vi text 
+ 1460  cd 
+ 1461  cd srinu/
+ 1462  lsmod | grep my_debugfs
+ 1463  sudo rsmod my_debugfs
+ 1464  sudo rsmod my_debugfs.ko
+ 1465  sudo rmmod my_debugfs.ko
+ 1466  lsmod | grep my_debugfs
+ 1467  make
+ 1468  lsmod | grep my_debugfs
+ 1469  sudo insmod my_debugfs.ko 
+ 1470  cd kernel/
+ 1471  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- menuconfig
+ 1472  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4 Image.gz dtbs KERNELRELEASE=4.9.56-linaro-lt-qcom
+ 1473  chmod +777 Makefile 
+ 1474  vi sort.py
+ 1475  python sort.py
+ 1476  vi sort.py
+ 1477  python sort.py
+ 1478  vi sort.py
+ 1479  python sort.py
+ 1480  vi sort.py
+ 1481  python sort.py
+ 1482  vi sort.py
+ 1483  python sort.py
+ 1484  vi sort.py
+ 1485  PYTHON
+ 1486  python
+ 1487  ssh venkatesh.odt bandaven@192.168.2.142:~/Desktop
+ 1488  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4 Image.gz dtbs KERNELRELEASE=4.9.56-linaro-lt-qcom
+ 1489  adb shell
+ 1490  adb devices
+ 1491  adb push /home/systebui/Desktop/video.mp4 /sdcard/Download/
+ 1492  add shell
+ 1493  adb shell
+ 1494  adb shell
+ 1495  adb input keyevent "KEYCODE_DPAD_DOWN"
+ 1496  adb shell input keyevent "KEYCODE_DPAD_DOWN"
+ 1497  adb shell input keyevent KEYCODE_DPAD_DOWN
+ 1498  adb shell input keyevent KEYCODE_DPAD_UP
+ 1499  adb shell input keyevent KEYCODE_ENTER
+ 1500  adb shell input keyevent KEYCODE ENTER
+ 1501  adb devices
+ 1502  adb shell input keyevent KEYCODE_ESCAPE
+ 1503  adb shell input keyevent KEYCODE_ENTER
+ 1504  adb logcat >> nnlog.txt
+ 1505  gedit nnlog.txt 
+ 1506  history
+ 1507  adb push /home/systebui/Desktop/video.mp4 /sdcard/Download/
+ 1508  adb shell am start -a android.intent.action.VIEW -d file:///sdcard/Download/video.mp4 -t audio/mp4
+ 1509  history
+ 1510  adb shell input keyevent KEYCODE_DPAD_DOWN
+ 1511  adb shell input keyevent KEYCODE_DPAD_UP
+ 1512  adb shell input keyevent KEYCODE_ENTER
+ 1513  adb shell input keyevent KEYCODE_ESCAPE
+ 1514  adb shell am start -a android.intent.action.VIEW -d file:///sdcard/Download/video.mp4 -t audio/mp4
+ 1515  adb shell input keyevent KEYCODE_ENTER
+ 1516  adb shell dumpsys media.player
+ 1517  adb logcat media.player > mxlog.txt
+ 1518  adb shell input keyevent KEYCODE_ESCAPE
+ 1519  rm nnlog.txt 
+ 1520  rm mxlog.txt 
+ 1521  adb shell am start -a android.intent.action.VIEW -d file:///sdcard/Download/video.mp4 -t audio/mp4
+ 1522  adb shell input keyevent KEYCODE_ENTER
+ 1523  adb shell input keyevent KEYCODE_ESCAPE
+ 1524  am start -n com.mxtech.videoplayer.ad/.ActivityScreen -d "file:///sdcard/Download/video.mp4" --user 0 --activity-clear-task   
+ 1525  adb shell am start -n com.mxtech.videoplayer.ad/.ActivityScreen -d "file:///sdcard/Download/video.mp4" --user 0 --activity-clear-task   
+ 1526  adb shell input keyevent KEYCODE_UP
+ 1527  adb shell input keyevent KEYCODE_DOWN
+ 1528  adb shell input keyevent KEYCODE_DPAD_LEFT
+ 1529  adb shell input keyevent KEYCODE_ENTER
+ 1530  adb shell input keyevent KEYCODE_ESCAPE
+ 1531  adb shell input keyevent KEYCODE_ENTER
+ 1532  adb shell input keyevent KEYCODE_ESCAPE
+ 1533  adb am start -a android.intent.action.VIEW "http://www.youtube.com/watch?v=YRhFSWz_J3I"
+ 1534  adb shell am start -a android.intent.action.VIEW "http://www.youtube.com/watch?v=YRhFSWz_J3I"
+ 1535  adb shell input keyevent KEYCODE_ENTER
+ 1536  adb shell input keyevent KEYCODE_DOWN
+ 1537  ls
+ 1538  gedit youtubelog.txt
+ 1539  am start -n com.mxtech.videoplayer.ad/.ActivityScreen -d "file:///sdcard/Download/video.mp4" --user 0 --activity-clear-task   
+ 1540  adb shell am start -n com.optoma.nuforce/.ActivityScreen -d "file:///sdcard/Download/video.mp4" --user 0 --activity-clear-task   
+ 1541  exit
+ 1542  ls
+ 1543  cd Desktop/
+ 1544  ls
+ 1545  adb shell service list
+ 1546  adb devices
+ 1547  adb -killserver
+ 1548  adb device
+ 1549  adb devices
+ 1550  adb -killserver
+ 1551  adb kill-server
+ 1552  adb devices
+ 1553  adb start
+ 1554  adb -start
+ 1555  adb start-server
+ 1556  adb devices
+ 1557  sudo adb start-server
+ 1558  adb devices
+ 1559  sudo adb kill-server
+ 1560  sudo adb start-server
+ 1561  adb devices
+ 1562  adb shell service list
+ 1563  adb shell service list | grep "media"
+ 1564  adb shell service check media.player
+ 1565  adb shell dumpsys activity services media.player
+ 1566  adb shell dumpsys activity services
+ 1567  adb shell dumpsys activity services media.player
+ 1568  ls
+ 1569  cp video.mp4 adb shell /sdcard/Download
+ 1570  cp video.mp4 adb shell/sdcard/Download
+ 1571  ;ls
+ 1572  ls
+ 1573  pwd
+ 1574  adb shell dumpsys activity services media.player
+ 1575  adb shell
+ 1576  adb devices
+ 1577  adb push software/MX\ Player.apk /sdcard/Download
+ 1578  adb push software/NuPlayer_v1.015_apkpure.com.apk /sdcard/Download
+ 1579  adb shell dumpsys activity services media.player
+ 1580  adb push software/NuPlayer_v1.015_apkpure.com.apk /sdcard/Download
+ 1581  adb shell dumpsys activity services myservice
+ 1582  adb shell dumpsys activity services media.player
+ 1583  adb shell dumpsys activity services com.media.player
+ 1584  adb shell dumpsys activity services 
+ 1585  adb shell dumpsys activity
+ 1586  adb shell dumpsys
+ 1587  adb logcat media.player > mxlog.txt
+ 1588  gedit mxlog.txt 
+ 1589  adb -d logcat com.mxtech.videoplayer.ad:I *:S > mx1log.txt
+ 1590  adb -d logcat com.mxtech.videoplayer.ad:I *:S
+ 1591  adb -d 
+ 1592  adb shell dumpsys activity
+ 1593  adb log
+ 1594  adb logcat 
+ 1595  exit
+ 1596  adb shell
+ 1597  exit
+ 1598  cd Desktop/
+ 1599  cd v
+ 1600  cd 
+ 1601  cd Videos/
+ 1602  ls
+ 1603  cd v
+ 1604  ls
+ 1605  cd
+ 1606  cd srinu/
+ 1607  cd kernel/
+ 1608  ls
+ 1609  cd include/
+ 1610  ls
+ 1611  d linux/
+ 1612  cd linux/
+ 1613  ls
+ 1614  ls debug*
+ 1615  cd ../..
+ 1616  ls
+ 1617  cd drivers/
+ 1618  cd gpu/
+ 1619  cd ..
+ 1620  ls de*
+ 1621  cd gpu/drm/
+ 1622  ls de*
+ 1623  ls
+ 1624  vi Makefile 
+ 1625  cd 
+ 1626  cd srinu/
+ 1627  ls
+ 1628  lsmod | grep debugfs
+ 1629  cd
+ 1630  cd Videos/
+ 1631  ls
+ 1632  cd v
+ 1633  ls
+ 1634  ssh *.docx *.odt bandaven@192.168.2.142:~/Desktop
+ 1635  ssh *.odt bandaven@192.168.2.142:~/Desktop
+ 1636  ls
+ 1637  ssh printk.c bandaven@192.168.2.142:~/Desktop
+ 1638  cd
+ 1639  cd Desktop/
+ 1640  ls
+ 1641  cd 3/kernel/
+ 1642  grep -r cttc
+ 1643  cd drivers/gpu/drm/
+ 1644  grep -r cttc
+ 1645  grep -r crtc
+ 1646  grep -r struct drm_crtc
+ 1647  grep -r "struct drm_crtc"
+ 1648  grep -r "drm_crtc_init"
+ 1649  vi drm_crtc.c 
+ 1650  grep -r "(*set_property)"
+ 1651  ifconfig
+ 1652  scp *.txt patildaya@192.168.2.108:~/Pictures
+ 1653  scp *.txt patilday@192.168.2.108:~/Pictures
+ 1654  cat new_log.txt | grep "MX.Player" > mx_palyer.txt
+ 1655  cat mx_player.txt 
+ 1656  cat new_log.txt | grep "MX.Player"
+ 1657  ls
+ 1658  cd Desktop/3/kernel/
+ 1659  git branch
+ 1660  git checkout Total Exp:
+ 1661  Relevant Exp:
+ 1662  CCTC:
+ 1663  ECTC:
+ 1664  git checkout siba_drm
+ 1665  git checkout kernel-17.09
+ 1666  exit
+ 1667  ifconfig
+ 1668  cd Desktop/
+ 1669  cd 3
+ 1670  cd kernel/
+ 1671  cd drivers/
+ 1672  grep -r "module_init(drm_crtc_init)"
+ 1673  cd gpu/
+ 1674  grep -r "module_init(drm_crtc_init)"
+ 1675  cd drm/
+ 1676  grep -r "module_init(drm_crtc_init)"
+ 1677  grep -r "module_init(drm_crtc"
+ 1678  grep -r "module_init(drm_
+ 1679  grep -r "module_init(drm_"
+ 1680  vi drm_kms_helper_common.c 
+ 1681  vi 
+ 1682  ls
+ 1683  vi drm_kms_helper_common.c 
+ 1684  grep -r "module_init(drm
+ 1685  grep -r "module_init(drm"
+ 1686  cd msm
+ 1687  ls
+ 1688  cd ..
+ 1689  ls
+ 1690  cd msm/
+ 1691  ls
+ 1692  grep -r "module_init(drm"
+ 1693  grep -r "module_init"
+ 1694  vi msm_drv.c
+ 1695  cd mdp/
+ 1696  ls
+ 1697  grep -r "module_init"
+ 1698  cd mdp4
+ 1699  ls
+ 1700  vi mdp4.c
+ 1701  ls
+ 1702  vi mdp4_crtc.c 
+ 1703  ls
+ 1704  grep -r "module_init"
+ 1705  cd ..
+ 1706  grep -r "module_init"
+ 1707  ls
+ 1708  cd mdp4/
+ 1709  ls
+ 1710  cd Desktop/3/kernel/drivers/gpu/drm/
+ 1711  vi drm_crtc_helper_internal.h 
+ 1712  ls
+ 1713  cd arm
+ 1714  ls
+ 1715  cd ..
+ 1716  cd msm/
+ 1717  ls
+ 1718  cd mdp/
+ 1719  ls
+ 1720  cd mdp4
+ 1721  ls
+ 1722  vi mdp4_crtc.c 
+ 1723  grep -r "module_init"
+ 1724  cd ..
+ 1725  grep -r "module_init"
+ 1726  cd ..
+ 1727  grep -r "module_init"
+ 1728  ls
+ 1729  vi Kconfig 
+ 1730  grep -r "module_init"
+ 1731  vi msm_drv.c
+ 1732  ls
+ 1733  cd ..
+ 1734  ls
+ 1735  find drm_encoder
+ 1736  find drm_encoder.c
+ 1737  find *drm_encoder.c
+ 1738  cd ../.../
+ 1739  cd ../../
+ 1740  cd ..
+ 1741  git branch
+ 1742  git chechout drmwork
+ 1743  git checkout drmwork
+ 1744  git branch
+ 1745  ls
+ 1746  git branch
+ 1747  cd Documentation/
+ 1748  ls
+ 1749  cd gpu/
+ 1750  ls
+ 1751  cd ..
+ 1752  ls
+ 1753  cd 
+ 1754  scp DragonBoard\ 410c_Costem.pdf alvalsan@192.168.2.137:~
+ 1755  ls
+ 1756  cd Downloads/
+ 1757  ls
+ 1758  adb devices
+ 1759  adb kill-server
+ 1760  adb start-server
+ 1761  adb devices
+ 1762  adb kill-server
+ 1763  sudo adb kill-server
+ 1764  sudo adb start-server
+ 1765  adb devices
+ 1766  cd
+ 1767  ls
+ 1768  adb push org.mozilla.firefox_46.0-2015414041_minAPI15\(armeabi-v7a\)\(nodpi\).apk /sdcard/Download
+ 1769  adb logcat -b kernel
+ 1770  adb push video.mp4 /sdcard/Download
+ 1771  am start -n com.mxtech.videoplayer.ad/.ActivityScreen -d "file:///sdcard/Movies/The egg of the King.mp4" --user 0 --activity-clear-task
+ 1772  adb shell
+ 1773  adb input keyevent KEYCODE_MENU
+ 1774  adb SHELL input keyevent KEYCODE_MENU
+ 1775  adb shell input keyevent KEYCODE_MENU
+ 1776  adb shell input keyevent user_rotation 0
+ 1777  adb shell input keyevent user_rotation 1
+ 1778  adb shell input keyevent KEYCODE_MENU
+ 1779  adb shell input keyevent KEYCODE_ESCAPE
+ 1780  adb shell input keyevent KEYCODE_BACK
+ 1781  adb shell input keyevent user_rotation 1
+ 1782  adb shell input keyevent user_rotation 0
+ 1783  adb shell input keyevent KEYCODE_BACK
+ 1784  adb shell settings put system accelerometer_rotation 0  #disable auto-rotate
+ 1785  adb shell input keyevent KEYCODE_MENU
+ 1786  adb shell settings put system accelerometer_rotation 0  
+ 1787  adb shell settings put system accelerometer_rotation 1
+ 1788  cd Desktop/
+ 1789  scp adb_commands.odt adb.odt DragonBoard\ 410c_Costem\,\ .odt alvalsan@192.168.2.137:~
+ 1790  cd ..
+ 1791  ls
+ 1792  lsmod | grep my_debugfs
+ 1793  sudo insmod my_debugfs.ko
+ 1794  lsmod | grep my_debugfs
+ 1795  cd kernel/
+ 1796  cd drivers/
+ 1797  cd gpu
+ 1798  ls
+ 1799  cd ../gpio
+ 1800  ls
+ 1801  cd ../gpu
+ 1802  cd drm/
+ 1803  ls
+ 1804  l
+ 1805  vi drm_modes.c
+ 1806  dmesg
+ 1807  cd kernel/drivers/gpu/drm/
+ 1808  grep -r "module_init("
+ 1809  vi drm_drv.c 
+ 1810  grep -r "module_init("
+ 1811  scp -r kernel/ prasasib@192.168.2.138:~/Dektop
+ 1812  scp -r kernel/ prasasib@192.168.2.138:~/
+ 1813  ping 192.168.2.138.
+ 1814  scp -r kernel/ prasasib@192.168.2.138:~/
+ 1815  pwd
+ 1816  scp -r /home/systebui/Desktop/3/kernel/ prasasib@192.168.2.138:~/
+ 1817  python -m http.server
+ 1818  python -m http:server
+ 1819  python -m http-server
+ 1820  python -m http server
+ 1821  python -m http_server
+ 1822  python3 -m http-server
+ 1823  pythonm http-server
+ 1824  python3 -m http.server
+ 1825  cd 
+ 1826  cd Desktop/
+ 1827  python3 -m http.server
+ 1828  scp -r /home/systebui/Desktop/3/kernel/ prasasib@192.168.2.138:~/
+ 1829  scp -r /kernel prasasib@192.168.2.138:~/
+ 1830  scp -r /kernel prasasib@192.168.2.138:~
+ 1831  scp -r /kernel prasasib@192.168.2.138:~/Desktop
+ 1832  scp /kernel prasasib@192.168.2.138:~/Desktop
+ 1833  scp -r /kernel prasasib@192.168.2.138:~/Desktop
+ 1834  service sshd status
+ 1835  scp -r prasasib@192.168.2.138:~/Desktop /home/systebui/Desktop/3/kernel/
+ 1836  sudo apt-get purge ssh-server
+ 1837  sudo apt-get install ssh-server ssh-client
+ 1838  ls
+ 1839  tar -czvf kernel.tar.gz kernel/ 
+ 1840  ls
+ 1841  rm -rf kernel.tar.gz 
+ 1842  cd ..
+ 1843  ls
+ 1844  python3 -m http.server
+ 1845  make
+ 1846  cd Desktop/
+ 1847  cd 3
+ 1848  cd kernel/
+ 1849  ls
+ 1850  cd drivers/
+ 1851  cd gpu/
+ 1852  cd drm/
+ 1853  cd msm/
+ 1854  ls
+ 1855  grep -r "module_init"
+ 1856  cd mdp
+ 1857  grep -r "module_init"
+ 1858  ls
+ 1859  cd mdp4/
+ 1860  ls
+ 1861  vi mdp4_crtc.c 
+ 1862  find printk.c
+ 1863  ls
+ 1864  vi mdp4_crtc.c 
+ 1865  ls
+ 1866  vi mdp4_kms.c
+ 1867  exit
+ 1868  scp -r 3/ alvalsan@192.168.2.137:~
+ 1869  cd 
+ 1870  cd /usr/src/
+ 1871  ls
+ 1872  cd linux-headers-4.4.0-103
+ 1873  pwd
+ 1874  cd 
+ 1875  cd srinu/
+ 1876  ls
+ 1877  make
+ 1878  vi Makefile 
+ 1879  vi my_debugfs.h
+ 1880  vi my_debugfs.c
+ 1881  make
+ 1882  vi my_debugfs.c
+ 1883  make
+ 1884  vi my_debugfs.c
+ 1885  make
+ 1886  vi my_debugfs.c
+ 1887  make
+ 1888  vi my_debugfs.c
+ 1889  lsmod | grep drbugfs
+ 1890  make
+ 1891  vi Makefile 
+ 1892  make
+ 1893  vi debugfs.c
+ 1894  vi my_debugfs.c
+ 1895  make
+ 1896  cd 1
+ 1897  make
+ 1898  cd ..
+ 1899  cd kernel/drivers/gpu/drm/msm/
+ 1900  ls
+ 1901  vi msm_drv.c
+ 1902  cd ../../../
+ 1903  cd ..
+ 1904  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig distro.config
+ 1905  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- menuconfig
+ 1906  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4 Image.gz dtbs KERNELRELEASE=4.9.56-linaro-lt-qcom
+ 1907  cd arch/arm64/boot
+ 1908  ls
+ 1909  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- modules KERNELRELEASE=4.9.56-linaro-lt-qcom
+ 1910  cd ../../../
+ 1911  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- modules KERNELRELEASE=4.9.56-linaro-lt-qcom
+ 1912  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- KERNELRELEASE=4.9.56-linaro-lt-qcom INSTALL_MOD_STRIP=1 INSTALL_MOD_PATH=MODULES/  modules_install
+ 1913  cd ..
+ 1914  ./skales/dtbTool -o dt.img -s 2048  arch/arm64/boot/dts/qcom/
+ 1915  cd kernel/
+ 1916  ./skales/dtbTool -o dt.img -s 2048  arch/arm64/boot/dts/qcom/
+ 1917  cd ..
+ 1918  ./skales/dtbTool -o dt.img -s 2048  arch/arm64/boot/dts/qcom/
+ 1919  ls
+ 1920  ./skales/dtbTool -o dt.img -s 2048  /srinu/kernel/arch/arm64/boot/dts/qcom/
+ 1921  ./skales/dtbTool -o dt.img -s 2048  /home/systebui/srinu/kernel/arch/arm64/boot/dts/qcom/
+ 1922  cd skales/
+ 1923  export cmdline="root=/dev/disk/by-partlabel/rootfs rw rootwait console=ttyMSM0,115200n8"
+ 1924  ./mkbootimg --kernel ../kernel/arch/arm64/boot/Image.gz --ramdisk ../initrd.img-4.9.56-linaro-lt-qcom --output boot-debugfs.img --dt dt.img pagesize 2048  --base 0x80000000 --cmdline "$cmdline"
+ 1925  cd ..
+ 1926  ./skales/dtbTool -o dt.img -s 2048  /home/systebui/srinu/kernel/arch/arm64/boot/dts/qcom/
+ 1927  ./mkbootimg --kernel ../kernel/arch/arm64/boot/Image.gz --ramdisk ../initrd.img-4.9.56-linaro-lt-qcom --output boot-debugfs.img --dt dt.img pagesize 2048  --base 0x80000000 --cmdline "$cmdline"
+ 1928  cd skales/
+ 1929  ./mkbootimg --kernel ../kernel/arch/arm64/boot/Image.gz --ramdisk ../initrd.img-4.9.56-linaro-lt-qcom --output boot-debugfs.img --dt dt.img pagesize 2048  --base 0x80000000 --cmdline "$cmdline"
+ 1930  ./mkbootimg --kernel ../kernel/arch/arm64/boot/Image.gz --ramdisk ../initrd.img-4.9.56-linaro-lt-qcom --output boot-debugfs.img --dt ../dt.img pagesize 2048  --base 0x80000000 --cmdline "$cmdline"
+ 1931  ls
+ 1932  cd ..
+ 1933  cd kernel/
+ 1934  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- defconfig distro.config
+ 1935  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4 rootfs.img dtbs KERNELRELEASE=4.9.56-linaro-lt-qcom
+ 1936  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4 rootfs.gz dtbs KERNELRELEASE=4.9.56-linaro-lt-qcom
+ 1937  c 
+ 1938  cd 
+ 1939  sudo apt-get upgrade
+ 1940  cd Downloads/
+ 1941  scp yocto\ build\ for\ dragonboard.pdf systebui@192.168.2.232:~
+ 1942  cd Downloads/
+ 1943  scp Yocto_Raspberrypi3.pdf systebui@192.168.2.232:~
+ 1944  cd Desktop/
+ 1945  cd 3
+ 1946  cd kernel/drivers/
+ 1947  cd gpu/drm/msm/mdp/
+ 1948  ls
+ 1949  cd mdp5/
+ 1950  ls
+ 1951  vi mdp5_crtc.c 
+ 1952  ls
+ 1953  cd ..
+ 1954  ls
+ 1955  cd ..
+ 1956  ls
+ 1957  vi msm_drv.c 
+ 1958  cd ..
+ 1959  grep -r "module_init"
+ 1960  vi drm_drv.c 
+ 1961  cd msm/
+ 1962  grep -r "module_init"
+ 1963  vi msm_drv.c 
+ 1964  cd Desktop/
+ 1965  cd 3/kernel/drivers/gpu/drm/
+ 1966  vi drm_*
+ 1967  ls drm_*
+ 1968  vi drm_drv.c 
+ 1969  scp -r drag systebui@192.168.2.232:~
+ 1970  cd Desktop/
+ 1971  cd 3
+ 1972  cd kernel/
+ 1973  cd drivers/
+ 1974  cd gpu/
+ 1975  cd drm/
+ 1976  ls
+ 1977  vi drm_crtc.c 
+ 1978  cd msm/
+ 1979  ls
+ 1980  cd mdp/
+ 1981  ls
+ 1982  cd mdp4/
+ 1983  ls
+ 1984  vi mdp4_crtc.c 
+ 1985  vi mdp4_kms.c
+ 1986  ls
+ 1987  cd ..
+ 1988  ls
+ 1989  cd ..
+ 1990  ls
+ 1991  cd ..
+ 1992  ls
+ 1993  ls drm_color_mgmt.c
+ 1994  vi drm_color_mgmt.c
+ 1995  history
+ 1996  history | grep push
+ 1997  adb shell settings put system accelerometer_rotation 0  
+ 1998  adb devices
+ 1999  sudo adb devices
+ 2000  history > raja_imp_history.txt
